@@ -1,22 +1,30 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
-import CourseList from './CourseList';
 
-export const NavBar = () => {
-  return (
-    <div>
-      <AppBar position='static'>
-        <Toolbar>
-          <Typography variant='h6' color='inherit'>
-            Code Frequency Material
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <CourseList />
-    </div>
-  );
-};
+export const Navbar = (props) => (
+  <List component='nav'>
+    <ListItem component='div'>
+      <ListItemText inset>
+        <Typography color='inherit' variant='h6'>
+          Home
+        </Typography>
+      </ListItemText>
+      <ListItemText inset>
+        <Typography color='inherit' variant='h6'>
+          Posts
+        </Typography>
+      </ListItemText>
+      <ListItemText inset>
+        <Typography color='inherit' variant='h6'>
+          Contact
+        </Typography>
+      </ListItemText>
+    </ListItem>
+  </List>
 
-export default NavBar;
+)
+
+export default Navbar;
