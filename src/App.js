@@ -1,13 +1,16 @@
-import React from 'react';
-import NavBar from './components/NavBar';
+import React, { useState } from 'react';
+import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField';
+import Paper from '@material-ui/core/Paper';
+import Header from './components/Header';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <NavBar />
-    </div>
-  );
-}
+  <div className='App'>
+    <Header />
+  </div>
+  )
+};
 
 export default App;
